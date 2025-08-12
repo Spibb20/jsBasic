@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 120px;
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+      }
+      .button {
+        width: 60px;
+        height: 60px;
+        cursor: crosshair;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buttons">
+      <button class="button is-info is-dark" id="b1" onclick="move()"></button>
+      <button class="button is-info is-dark" id="b2" onclick="move()"></button>
+      <button class="button is-info is-dark" id="b3" onclick="move()"></button>
+      <button class="button is-info is-dark" id="b4" onclick="move()"></button>
+      <button class="button is-info is-dark" id="b5" onclick="move()"></button>
+      <button class="button is-info is-dark" id="b6" onclick="move()"></button>
+      <button class="button is-info is-dark" id="b7" onclick="move()"></button>
+      <button class="button is-info is-dark" id="b8" onclick="move()"></button>
+      <button class="button is-info is-dark" id="b9" onclick="move()"></button>
+    </div>
+  </body>
+  <script>
+    let p1 = "",
+      p2 = "",
+      p3 = "";
+    let p4 = "",
+      p5 = "",
+      p6 = "";
+    let p7 = "",
+      p8 = "",
+      p9 = "";
+
+    let player1;
+    let check;
+    let cPlayer = "X";
+
+    function move(ps) {
+      let btns = document.getElementsByClassName("button");
+      if (ps == 1 && p1 == "") {
+        p1 = player1;
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript-Day2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div class="columns mt-6">
+      <div class="column is-two-thirds is-offset-one-thirds">
+        <div class="buttons">
+          <button class="button is-primary" onclick="oddEven()">
+            Odd or Even
+          </button>
+          <button class="button is-success" onclick="ageGroup()">
+            Nasnii Buleg
+          </button>
+          <button class="button is-primary" onclick="loginSystem()">
+            login
+          </button>
+          <button class="button is-success" onclick="largerNumber()">
+            Ih too
+          </button>
+          <button class="button is-primary" onclick="trafficLight()">
+            gerlen dohio
+          </button>
+          <button class="button is-success" onclick="rps()">
+            Rock Paper Scissors
+          </button>
+          <button class="button is-primary" onclick="scoring()">
+            Unelgee shalgah
+          </button>
+          <button class="button is-success" onclick="simpleCalc()">
+            Toonii Mashin
+          </button>
+          <button class="button is-primary" onclick="garagCalc()">
+            weekdays
+          </button>
+          <button class="button is-success" onclick="leapYearChecker()">
+            Undur jil shalgah
+          </button>
+          <button class="button is-primary" onclick="triangleChecker()">
+            Gurvaljin eseh
+          </button>
+          <button class="button is-success" onclick="clockConverter()">
+            Clock
+          </button>
+          <button class="button is-primary" onclick="monthDays()">
+            MonthDays
+          </button>
+          <button class="button is-success" onclick="atm()">ATM</button>
+          <button class="button is-primary" onclick="company()">company</button>
+          <button class="button is-success" onclick="discountCalc()">
+            Discount
+          </button>
+        </div>
+        <article class="message is-primary">
+          <div class="message-header">
+            <p>Results</p>
+          </div>
+          <div class="message-body" id="result"></div>
+        </article>
+      </div>
+    </div>
+
+    <script>
+      let output;
+
+      function print() {
+        document.getElementById("result").innerText = output;
+      }
+
+      function oddEven() {
+        let tooN = prompt("Toog oruul");
+        too = Number(tooN);
+        let hariu;
+
+        if (too % 2 == 0) {
+          console.log("tegsh");
+          hariu = "Even";
+        } else {
+          console.log("sondgoi");
+          hariu = "Odd";
+        }
+        output = hariu;
+        print();
+      }
+
+      function ageGroup() {
+        let ageW = prompt("What's your age");
+        age = Number(ageW);
+        let group;
+
+        if (age < 13) {
+          group = "Child";
+          console.log("child");
+        }
+        if (age >= 13 && age <= 19) {
+          group = "Teen";
+          console.log("TeenAger");
+        }
+        if (age >= 20 && age <= 64) {
+          group = "Adult";
+          console.log("Adult");
+        }
+        if (age >= 65) {
+          group = "Senior";
+          console.log("Senior");
+        }
+
+        output = group;
+        print();
+      }
+
+      function loginSystem() {
+        const name = "admin";
+        const password = "pass123";
+        let log;
+
+        let userName = prompt(" enter your Username");
+        let passWord = prompt("Enter your password");
+
+        if (name == userName && password == passWord) {
+          log = "Login successful";
+          console.log("Success");
+        } else {
+          log = "Incorrect credentials";
+          console.log("Incorrect");
+        }
+
+        output = log;
+        print();
+      }
+
+      function largerNumber() {
+        let number1 = prompt("Ehnii toog oruul");
+        let number2 = prompt("Daraagiin toog oruul");
+
+        let hariu;
+        let st = " is Larger";
+
+        num1 = Number(number1);
+        num2 = Number(number2);
+
+        if (num1 > num2) {
+          hariu = num1 + st;
+        }
+        if (num2 > num1) {
+          hariu = num2 + st;
+        }
+        if (num1 == num2) {
+          hariu = "equal";
+        }
+
+        output = hariu;
+        print();
+      }
+
+      function trafficLight() {
+        let light = prompt("red/yellow/green");
+
+        if (light == "red") {
+          output = "stop";
+        }
+        if (light == "yellow") {
+          output = "Wait";
+        }
+        if (light == "green") {
+          output = "Go";
+        }
+
+        print();
+      }
+
+      function rps() {
+        let player1 = prompt("rock/paper/scissors");
+        let player2 = prompt("rock/paper/scissors");
+
+        if (player1 == "rock" && player2 == "paper") {
+          output = "player2 wins";
+        }
+        if (player1 == "rock" && player2 == "scissors") {
+          output = "player1 wins";
+        }
+        if (player1 == "paper" && player2 == "rock") {
+          output = "player1 wins";
+        }
+        if (player1 == "paper" && player2 == "scissors") {
+          output = "player2 wins";
+        }
+        if (player1 == "scissors" && player2 == "rock") {
+          output = "player2 wins";
+        }
+        if (player1 == "scissors" && player2 == "paper") {
+          output = "player1 wins";
+        }
+        if (player1 == "scissors" && player2 == "scissors") {
+          output = "equal";
+        }
+        if (player1 == "paper" && player2 == "paper") {
+          output = "equal";
+        }
+        if (player1 == "rock" && player2 == "rock") {
+          output = "equal";
+        }
+        print();
+      }
+
+      function scoring() {
+        let score = prompt("Dung oruul");
+        scoreValue = Number(score);
+        let unelgee;
+        if (score >= 0 && score <= 100) {
+          if (score >= 90) {
+            unelgee = "A";
+          } else if (score >= 80) {
+            unelgee = "B";
+          } else if (score >= 70) {
+            unelgee = "C";
+          } else if (score >= 60) {
+            unelgee = "D";
+          } else if (score < 60) {
+            unelgee = "F";
+          }
+        } else {
+          unelgee = "0-100 hurtel dungeer uneleh bolomjtoi";
+        }
+
+        output = unelgee;
+        print();
+      }
+      function simpleCalc() {
+        let number1 = prompt("Ehnii toog oruul");
+        num1 = Number(number1);
+        let operator = prompt("Uildliig oruul +|-|*|/");
+        let number2 = prompt("Daraagyn toog oruul");
+        num2 = Number(number2);
+        let hariu;
+
+        if (operator === "+") {
+          hariu = num1 + num2;
+        } else if (operator === "-") {
+          hariu = num1 - num2;
+        } else if (operator === "*") {
+          hariu = num1 * Num2;
+        } else if (operator === "/") {
+          hariu = num1 / num2;
+        } else {
+          hariu = "hiigdeh bolomjgui uildel";
+        }
+        output = hariu;
+        print();
+      }
+
+      function garagCalc() {
+        let too = prompt("1-7 hoorond udriin toog olno uu");
+        num = Number(too);
+        let hariu;
+
+        if (num === 1) {
+          hariu = "Monday";
+        } else if (num === 2) {
+          hariu = "Tuesday";
+        } else if (num === 3) {
+          hariu = "Wednesday";
+        } else if (num === 4) {
+          hariu = "Thursday";
+        } else if (num === 5) {
+          hariu = "Friday";
+        } else if (num === 6) {
+          hariu = "Saturday";
+        } else if (num === 7) {
+          hariu = "Sunday";
+        } else {
+          hariu = "1-7 hoorond too oruulna uu";
+        }
+
+        output = hariu;
+        print();
+      }
+
+      function leapYearChecker() {
+        let input = prompt("Jil oruul");
+        year = Number(input);
+        let hariu;
+
+        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+          hariu = "Leap year";
+        } else {
+          hariu = "Not a leap year";
+        }
+
+        output = hariu;
+        print();
+      }
+
+      function triangleChecker() {
+        let side1 = prompt("Gurvaljnii 1r taliig oruul");
+        let side2 = prompt("Gurvaljnii 2r taliig oruul");
+        let side3 = prompt("Gurvaljnii 3r taliig oruul");
+        a = Number(side1);
+        b = Number(side2);
+        c = Number(side3);
+        let hariu;
+
+        if (a + b > c && a + c > b && b + c > a) {
+          if (a === b && b === c) {
+            hariu = "Equilateral";
+          } else if (a === b || b === c || a === c) {
+            hariu = "Isosceles";
+          } else {
+            hariu = "Scalene";
+          }
+        } else {
+          hariu = "Invalid triangle";
+        }
+
+        output = hariu;
+        print();
+      }
+
+      function clockConverter() {
+        hour = prompt("Tsag oruul");
+        let hariu;
+
+        if (hour === 0 || hour === 24) {
+          hariu = "12 AM";
+        } else if (hour === 12) {
+          hariu = "12 PM";
+        } else if (hour > 0 && hour < 12) {
+          hariu = hour + " AM";
+        } else if (hour > 12 && hour < 24) {
+          hariu = hour - 12 + " PM";
+        } else {
+          hariu = "Must be 0-24";
+        }
+
+        output = hariu;
+        print();
+      }
+
+      function monthDays() {
+        months = prompt("Sariig oruul");
+        month = Number(months);
+
+        let hariu;
+
+        if (month === 2) {
+          hariu = "28/29";
+        } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+          hariu = "30";
+        } else if (month >= 1 && month <= 12) {
+          hariu = "31";
+        } else {
+          hariu = "must be 0-12";
+        }
+
+        output = hariu;
+        print();
+      }
+
+      function atm() {
+        blnc = prompt("Dansand hiih mungu");
+        balance = Number(blnc);
+
+        wth = prompt("Dansnaas avah mungun dun");
+        withdraw = Number(wth);
+
+        let hariu;
+
+        if (withdraw % 5000 !== 0) {
+          hariu = "Error: Must be multiple of 5,000";
+        } else if (withdraw > balance - 10000) {
+          hariu = "Error: Must leave at least 10,000 in balance";
+        } else {
+          hariu = "Successful";
+        }
+
+        output = hariu;
+        print();
+      }
+
+      function company() {
+        sales = prompt("Borluulaltiin hemjeeg oruul");
+        sale = Number(sales);
+
+        let hariu;
+        let uramshuulal;
+
+        if (sale >= 5000) {
+          uramshuulal = (sale * 12) / 100;
+          hariu = "Uramshuulal bolon unelgee: " + uramshuulal + " Ontsgoi";
+        } else if (sale >= 3000) {
+          uramshuulal = (sale * 8) / 100;
+          hariu = "Uramshuulal bolon unelgee: " + uramshuulal + " Sain";
+        } else if (sale >= 1000) {
+          uramshuulal = (sale * 5) / 100;
+          hariu = "Uramshuulal bolon unelgee: " + uramshuulal + " Dund";
+        } else {
+          uramshuulal = (sale * 2) / 100;
+          hariu = "Uramshuulal bolon unelgee: ";
+          uramshuulal + " Saijruulah shaardlagatai";
+        }
+
+        output = hariu;
+        print();
+      }
+
+      function discountCalc() {
+        let purchases = prompt("Hudaldan avaltiin dun");
+        let purchase = Number(purchases);
+        let discount;
+
+        if (purchase >= 1000) {
+          discount = (purchase * 15) / 100;
+        } else if (purchase >= 500) {
+          discount = (purchase * 10) / 100;
+        } else {
+          discount = (purchase * 5) / 100;
+        }
+        output = discount;
+        print();
+      }
+
+      function showB() {}
+
+      function ox() {
+        let player1 = prompt("");
+        let player2 = prompt("");
+
+        let row11 = " ";
+        let row12 = " ";
+        let row13 = " ";
+        let row21 = " ";
+        let row22 = " ";
+        let row23 = " ";
+        let row31 = " ";
+        let row32 = " ";
+        let row33 = " ";
+      }
+    </script>
+  </body>
+</html>

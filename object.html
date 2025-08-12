@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 2</title>
+  </head>
+  <body>
+    <script>
+      const students = [
+        { name: "Boldoo", age: 17, score: 72, balance: 8500, gender: "male" },
+        { name: "Dorjoo", age: 20, score: 65, balance: 12000, gender: "male" },
+        { name: "Dorjoo", age: 21, score: 75, balance: 14000, gender: "male" },
+        { name: "Bataa", age: 16, score: 80, balance: 5000, gender: "male" },
+        { name: "Sarnai", age: 19, score: 90, balance: 3000, gender: "female" },
+        {
+          name: "Enkhjin",
+          age: 18,
+          score: 95,
+          balance: 20000,
+          gender: "female",
+        },
+        { name: "Naraa", age: 14, score: 60, balance: 11000, gender: "female" },
+      ];
+
+      //-1---------------------------
+      /*function lowest() {
+        let low;
+        low = students[0];
+        for (i = 1; i < students.length; i++) {
+          if (low.score > students[i].score) {
+            low = students[i];
+          }
+        }
+        console.log(low);
+        return low;
+      }
+      lowest();*/
+      //-2---------------------------
+      /*function minusEighteen() {
+        let ages = [];
+        for (let i = 0; i < students.length; i++) {
+          if (students[i].age < 18) ages.push(students[i]);
+        }
+        return ages;
+        //console.log(ages);
+      }
+      console.log(minusEighteen());*/
+      //-3---------------------------
+      /*function sumScore() {
+        let sum = students[0].score;
+        for (let i = 1; i < students.length; i++) {
+          sum += students[i].score;
+        }
+        console.log(sum);
+        return sum;
+      }*/
+      //-4----------------------------
+      /*function findStudentsByName() {
+        let n = prompt("Haih ner oruulna uu");
+        for (let i = 0; i < students.length; i++) {
+          if (students[i].name === n) {
+            console.log(students[i]);
+          } else {
+            console.log("Suragch baihgui");
+          }
+        }
+      }
+      findStudentsByName();*/
+
+      function sortingB() {
+        let i, j, temp;
+        let swapped;
+        for (i = 0; i < students.length - 1; i++) {
+          swapped = false;
+          for (j = 0; j < students.length - i - 1; j++) {
+            if (students[j] > students[j + 1]) {
+              temp = students[j];
+              students[j] = students[j + 1];
+              students[j + 1] = temp;
+              swapped = true;
+            }
+          }
+          if (swapped == false) break;
+        }
+      }
+
+      function printArray() {
+        let i;
+        for (i = 0; i < students.length; i++) console.log(students[i] + " ");
+      }
+
+      sortingB(students);
+      console.log("Sorted array: ");
+      printArray(students);
+    </script>
+  </body>
+</html>
