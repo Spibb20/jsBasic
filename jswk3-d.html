@@ -24,7 +24,9 @@
             <th>#</th>
             <th></th>
             <th>Name</th>
-            <th>Age</th>
+            <th>
+              <button onclick="ageSortingA(); ageSortingD()">Age</button>
+            </th>
             <th>Email</th>
             <th>Username</th>
             <th>Phone</th>
@@ -290,18 +292,16 @@
           scores: [90, 89, 88],
         },
       ];
+      let sortState;
 
-      function generateTableRow(index, student) {
-        function average() {
-          let av;
+      const generateTableRow = (index, student) => {
+        const average = () => {
           let sum = student.scores[0];
-          for (let j = 1; j < 3; j++) {
-            sum += student.scores[j];
-          }
+          for (let j = 1; j < 3; j++) sum += student.scores[j];
           return Math.round(sum / 3);
-        }
+        };
 
-        const result = `
+        return `
         <tr>
             <td>${`${index + 1}`.padStart(3, 0)}</td>
             <td>${student.овог.charAt(0)}</td>
@@ -318,31 +318,29 @@
             <td>${student.scores}</td>
             <td>${(student.avg = average(student.scores))}</td>
           </tr>`;
-        return result;
-      }
+      };
 
-      function printAll() {
+      const printAll = () => {
         let output = "";
 
         for (let i = 0; i < students.length; i++) {
           output += generateTableRow(i, students[i]);
         }
         document.getElementById("tableBody").innerHTML = output;
-      }
+      };
       printAll();
-
-      function calcAdult() {
+      const calcAdult = () => {
         let output = "";
 
         for (let i = 0; i < students.length; i++) {
-          if (students[i].нас > 30) {
-            output += generateTableRow(i, students[i]);
-          }
+          students[i].нас > 30
+            ? (output += generateTableRow(i, students[i]))
+            : "Under age of 30";
         }
         document.getElementById("tableBody").innerHTML = output;
-      }
+      };
 
-      function searchy() {
+      const searchy = () => {
         const query = prompt("Search query?");
 
         let output = "";
@@ -360,7 +358,16 @@
           }
         }
         document.getElementById("tableBody").innerHTML = output;
-      }
+      };
+
+      const ageSortingA = () => {
+        students.sort((a, b) => a.нас - b.нас);
+        printAll();
+      };
+      const ageSortingD = () => {
+        students.sort((a, b) => b.нас - a.нас);
+        printAll();
+      };
     </script>
   </body>
 </html>

@@ -68,31 +68,15 @@
       }
       findStudentsByName();*/
 
-      function sortingB() {
-        let i, j, temp;
-        let swapped;
-        for (i = 0; i < students.length - 1; i++) {
-          swapped = false;
-          for (j = 0; j < students.length - i - 1; j++) {
-            if (students[j] > students[j + 1]) {
-              temp = students[j];
-              students[j] = students[j + 1];
-              students[j + 1] = temp;
-              swapped = true;
-            }
+      const richy = () => {
+        let richStudents = [];
+        for (let i = 0; i < students.length; i++) {
+          if (students[i].balance > 10000) {
+            richStudents.push[students[i].name && students[i].balance];
           }
-          if (swapped == false) break;
+          console.log(richStudents);
         }
-      }
-
-      function printArray() {
-        let i;
-        for (i = 0; i < students.length; i++) console.log(students[i] + " ");
-      }
-
-      sortingB(students);
-      console.log("Sorted array: ");
-      printArray(students);
+      };
     </script>
   </body>
 </html>
