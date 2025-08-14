@@ -25,7 +25,7 @@
             <th></th>
             <th>Name</th>
             <th>
-              <button onclick="ageSortingA(); ageSortingD()">Age</button>
+              <button onclick="ageSorting()">Age</button>
             </th>
             <th>Email</th>
             <th>Username</th>
@@ -34,6 +34,7 @@
             <th>Hobbies</th>
             <th>Scores</th>
             <th>Avg</th>
+            <th>Last Logged</th>
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>
@@ -48,8 +49,9 @@
           email: "enkhbold.b@domain.mn",
           утас: "99112233",
           хүйс: "эрэгтэй",
-          hobbies: ["унших", "аялах", "шатар"],
-          scores: [85, 90, 78],
+          hobbies: ["шатар", "ном унших"],
+          scores: [85, 92, 78],
+          lastLogged: 1723578294000,
         },
         {
           овог: "Санжжавын",
@@ -58,8 +60,9 @@
           email: "tumenjargal.s@domain.mn",
           утас: "99001122",
           хүйс: "эрэгтэй",
-          hobbies: ["загасчлах", "фотограф", "усанд сэлэх"],
-          scores: [88, 92, 81],
+          hobbies: ["дугуй унах", "зурах"],
+          scores: [88, 91, 79],
+          lastLogged: 1726011203000,
         },
         {
           овог: "Ганхуягийн",
@@ -68,8 +71,9 @@
           email: "bayarmaa.g@domain.mn",
           утас: "88117766",
           хүйс: "эмэгтэй",
-          hobbies: ["зурах", "ном унших", "дурсгал цуглуулах"],
-          scores: [91, 87, 85],
+          hobbies: ["жигнэмэг хийх", "аялах"],
+          scores: [92, 87, 80],
+          lastLogged: 1724816600000,
         },
         {
           овог: "Чулуунбаатарын",
@@ -78,8 +82,9 @@
           email: "otgonjargal.ch@domain.mn",
           утас: "95124567",
           хүйс: "эмэгтэй",
-          hobbies: ["дугуй унах", "ногоо тарих", "кино үзэх"],
-          scores: [83, 88, 80],
+          hobbies: ["ногоо тарих", "кино үзэх"],
+          scores: [81, 90, 75],
+          lastLogged: 1725830032000,
         },
         {
           овог: "Доржсүрэнгийн",
@@ -88,8 +93,9 @@
           email: "munkhbayar.d@domain.mn",
           утас: "99008877",
           хүйс: "эрэгтэй",
-          hobbies: ["ном унших", "түүх судлах", "аялах"],
+          hobbies: ["загас барих", "биллярд"],
           scores: [89, 93, 84],
+          lastLogged: 1724297854000,
         },
         {
           овог: "Сүхбаатарын",
@@ -98,8 +104,9 @@
           email: "ganzorig.s@domain.mn",
           утас: "80223344",
           хүйс: "эрэгтэй",
-          hobbies: ["сагсан бөмбөг", "шатар", "зураг авах"],
-          scores: [86, 82, 88],
+          hobbies: ["шатар", "ууланд алхах"],
+          scores: [90, 85, 77],
+          lastLogged: 1724982300000,
         },
         {
           овог: "Цогтбаатарын",
@@ -108,8 +115,9 @@
           email: "khishigjargal.ts@domain.mn",
           утас: "95119900",
           хүйс: "эмэгтэй",
-          hobbies: ["бүжиглэх", "гал тогоо", "унших"],
-          scores: [92, 89, 87],
+          hobbies: ["ном унших", "бялуу хийх"],
+          scores: [86, 88, 81],
+          lastLogged: 1726139938000,
         },
         {
           овог: "Мөнхбатын",
@@ -118,8 +126,9 @@
           email: "sarantuya.m@domain.mn",
           утас: "88001234",
           хүйс: "эмэгтэй",
-          hobbies: ["ном унших", "хэл сурах", "цэцэг тарих"],
-          scores: [84, 86, 90],
+          hobbies: ["зураг авах", "дурсамж бичих"],
+          scores: [94, 89, 83],
+          lastLogged: 1725023400000,
         },
         {
           овог: "Баярсайханы",
@@ -128,8 +137,9 @@
           email: "otgonbayar.b@domain.mn",
           утас: "98112255",
           хүйс: "эрэгтэй",
-          hobbies: ["төгөлдөр хуур", "усанд сэлэх", "аялах"],
-          scores: [88, 91, 85],
+          hobbies: ["спорт тоглох", "ном унших"],
+          scores: [87, 91, 76],
+          lastLogged: 1723855442000,
         },
         {
           овог: "Эрдэнэбатын",
@@ -138,161 +148,176 @@
           email: "bolortuya.e@domain.mn",
           утас: "90001122",
           хүйс: "эмэгтэй",
-          hobbies: ["зурах", "гал тогоо", "аялах"],
-          scores: [90, 87, 88],
+          hobbies: ["будаа хийх", "аялах"],
+          scores: [84, 90, 78],
+          lastLogged: 1725244456000,
         },
         {
           овог: "Батмөнхийн",
           нэр: "Энхтуяа",
-          нас: 34,
+          нас: 30,
           email: "enkhtuya.bm@domain.mn",
-          утас: "96117788",
+          утас: "95223344",
           хүйс: "эмэгтэй",
-          hobbies: ["унших", "бүжиглэх", "кино үзэх"],
-          scores: [86, 89, 82],
+          hobbies: ["зураг зурах", "ном унших"],
+          scores: [83, 95, 82],
+          lastLogged: 1725733388000,
         },
         {
           овог: "Төмөрбаатарын",
           нэр: "Алтангэрэл",
-          нас: 39,
+          нас: 45,
           email: "altangerel.t@domain.mn",
-          утас: "88229900",
+          утас: "93112288",
           хүйс: "эрэгтэй",
-          hobbies: ["зураг авах", "ууланд авирах", "шатар"],
-          scores: [85, 88, 90],
+          hobbies: ["хөлбөмбөг", "аялах"],
+          scores: [95, 88, 80],
+          lastLogged: 1724312900000,
         },
         {
           овог: "Жамъянгийн",
           нэр: "Мөнхтуул",
           нас: 25,
-          email: "munkhtul.j@domain.mn",
-          утас: "99123456",
+          email: "munkhtuul.j@domain.mn",
+          утас: "88229911",
           хүйс: "эмэгтэй",
-          hobbies: ["гал тогоо", "зурах", "ном унших"],
-          scores: [88, 92, 84],
+          hobbies: ["кино үзэх", "зурах"],
+          scores: [87, 84, 79],
+          lastLogged: 1726154456000,
         },
         {
           овог: "Лхагвасүрэнгийн",
           нэр: "Баярцэцэг",
-          нас: 37,
+          нас: 34,
           email: "bayartsetseg.l@domain.mn",
-          утас: "95221144",
+          утас: "99115577",
           хүйс: "эмэгтэй",
-          hobbies: ["цэцэг тарих", "аялах", "кино үзэх"],
-          scores: [84, 85, 87],
+          hobbies: ["шатар", "загас барих"],
+          scores: [89, 91, 77],
+          lastLogged: 1724927755000,
         },
         {
           овог: "Очирбатын",
           нэр: "Ганбат",
-          нас: 42,
+          нас: 39,
           email: "ganbat.o@domain.mn",
-          утас: "98119922",
+          утас: "80001199",
           хүйс: "эрэгтэй",
-          hobbies: ["загасчлах", "шатар", "ууланд авирах"],
-          scores: [90, 88, 86],
+          hobbies: ["спорт тоглох", "аялах"],
+          scores: [90, 85, 82],
+          lastLogged: 1724378822000,
         },
         {
           овог: "Даваадоржийн",
           нэр: "Энхжаргал",
-          нас: 30,
+          нас: 28,
           email: "enkhjargal.d@domain.mn",
-          утас: "99223366",
+          утас: "95224488",
           хүйс: "эмэгтэй",
-          hobbies: ["унших", "зурах", "бүжиглэх"],
-          scores: [85, 87, 89],
+          hobbies: ["бялуу хийх", "ногоо тарих"],
+          scores: [82, 90, 84],
+          lastLogged: 1726061188000,
         },
         {
           овог: "Сэр-Одын",
           нэр: "Мягмарсүрэн",
-          нас: 45,
+          нас: 42,
           email: "myagmarsuren.s@domain.mn",
-          утас: "91110022",
+          утас: "99119922",
           хүйс: "эмэгтэй",
-          hobbies: ["цэцэг тарих", "гал тогоо", "ном унших"],
-          scores: [89, 91, 84],
+          hobbies: ["шатар", "аялах"],
+          scores: [93, 88, 86],
+          lastLogged: 1725210035000,
         },
         {
           овог: "Ганболдын",
           нэр: "Отгончимэг",
-          нас: 28,
+          нас: 26,
           email: "otgonchimeg.g@domain.mn",
-          утас: "97114455",
+          утас: "90115566",
           хүйс: "эмэгтэй",
-          hobbies: ["кино үзэх", "аялах", "хэл сурах"],
-          scores: [92, 88, 85],
+          hobbies: ["ном унших", "жигнэмэг хийх"],
+          scores: [88, 86, 80],
+          lastLogged: 1724718233000,
         },
         {
           овог: "Доржпаламын",
           нэр: "Цэцэгмаа",
           нас: 32,
           email: "tsetsegmaa.d@domain.mn",
-          утас: "99113377",
+          утас: "95128899",
           хүйс: "эмэгтэй",
-          hobbies: ["зурах", "унших", "шатар"],
-          scores: [87, 85, 90],
+          hobbies: ["кино үзэх", "зурах"],
+          scores: [84, 90, 79],
+          lastLogged: 1724159900000,
         },
         {
           овог: "Бямбадоржийн",
           нэр: "Сүхбат",
-          нас: 41,
+          нас: 29,
           email: "sukhbat.b@domain.mn",
-          утас: "99008844",
+          утас: "99007755",
           хүйс: "эрэгтэй",
-          hobbies: ["шатар", "сагсан бөмбөг", "ууланд авирах"],
-          scores: [88, 86, 89],
+          hobbies: ["хөлбөмбөг", "ууланд алхах"],
+          scores: [85, 87, 76],
+          lastLogged: 1725372244000,
         },
         {
           овог: "Мягмарын",
           нэр: "Наранцэцэг",
-          нас: 29,
+          нас: 23,
           email: "narantsetseg.m@domain.mn",
-          утас: "95001122",
+          утас: "99114433",
           хүйс: "эмэгтэй",
-          hobbies: ["цэцэг тарих", "аялах", "зурах"],
-          scores: [85, 87, 84],
+          hobbies: ["ном унших", "будаа хийх"],
+          scores: [90, 85, 81],
+          lastLogged: 1723817722000,
         },
         {
           овог: "Нямдоржийн",
           нэр: "Эрдэнэцэцэг",
-          нас: 35,
+          нас: 41,
           email: "erdenetsetseg.n@domain.mn",
-          утас: "99127799",
+          утас: "90225577",
           хүйс: "эмэгтэй",
-          hobbies: ["гал тогоо", "ном унших", "бүжиглэх"],
-          scores: [91, 88, 86],
+          hobbies: ["зураг авах", "аялах"],
+          scores: [92, 88, 85],
+          lastLogged: 1724748899000,
         },
         {
           овог: "Батжаргалын",
           нэр: "Гантуяа",
-          нас: 33,
+          нас: 24,
           email: "gantuya.bj@domain.mn",
-          утас: "96110055",
+          утас: "99556677",
           хүйс: "эмэгтэй",
-          hobbies: ["зурах", "унших", "аялах"],
-          scores: [89, 92, 88],
+          hobbies: ["жигнэмэг хийх", "кино үзэх"],
+          scores: [88, 89, 80],
+          lastLogged: 1726114422000,
         },
         {
           овог: "Цэрэндашийн",
           нэр: "Мөнгөнчимэг",
-          нас: 27,
-          email: "mungunchimeg.ts@domain.mn",
-          утас: "99223388",
+          нас: 37,
+          email: "munkhnchimeg.ts@domain.mn",
+          утас: "99114488",
           хүйс: "эмэгтэй",
-          hobbies: ["цэцэг тарих", "гал тогоо", "хэл сурах"],
-          scores: [85, 84, 87],
+          hobbies: ["шатар", "ном унших"],
+          scores: [91, 87, 84],
+          lastLogged: 1725166677000,
         },
         {
           овог: "Энхбатын",
           нэр: "Халиун",
-          нас: 24,
+          нас: 20,
           email: "khaliun.e@domain.mn",
-          утас: "95008866",
+          утас: "90002211",
           хүйс: "эмэгтэй",
-          hobbies: ["бүжиглэх", "унших", "зурах"],
-          scores: [90, 89, 88],
+          hobbies: ["спорт тоглох", "зурах"],
+          scores: [82, 85, 79],
+          lastLogged: 1723945599000,
         },
       ];
-      let sortState;
 
       const generateTableRow = (index, student) => {
         const average = () => {
@@ -300,6 +325,11 @@
           for (let j = 1; j < 3; j++) sum += student.scores[j];
           return Math.round(sum / 3);
         };
+
+        function lastLoggedConverter() {
+          const date = new Date(student.lastLogged);
+          return date.toLocaleString();
+        }
 
         return `
         <tr>
@@ -317,33 +347,35 @@
             <td>${student.hobbies}</td>
             <td>${student.scores}</td>
             <td>${(student.avg = average(student.scores))}</td>
+            <td>${(student.lastLogged = lastLoggedConverter())}</td>
           </tr>`;
       };
 
       const printAll = () => {
-        let output = "";
-
-        for (let i = 0; i < students.length; i++) {
-          output += generateTableRow(i, students[i]);
-        }
-        document.getElementById("tableBody").innerHTML = output;
+        renderStudents(students);
       };
       printAll();
-      const calcAdult = () => {
-        let output = "";
 
-        for (let i = 0; i < students.length; i++) {
-          students[i].нас > 30
-            ? (output += generateTableRow(i, students[i]))
-            : "Under age of 30";
-        }
-        document.getElementById("tableBody").innerHTML = output;
+      //--------------------------------
+      const calcAdult = () => {
+        const filteredStudents = students.filter(
+          (students) => students.нас >= 30
+        );
+        renderStudents(filteredStudents);
       };
 
-      const searchy = () => {
-        const query = prompt("Search query?");
+      const calcMinor = () => {
+        const filteredStudents = students.filter(
+          (students) => students.нас < 30
+        );
+        renderStudents(filteredStudents);
+      };
 
-        let output = "";
+      //--------------------------------------------------------
+
+      function searchy() {
+        const query = prompt("Search query?");
+        let searchedStudents = [];
 
         for (let i = 0; i < students.length; i++) {
           const lowerName = students[i].нэр.toLowerCase();
@@ -354,20 +386,37 @@
             lowerName.includes(lowerQuery) ||
             lowerEmail.includes(lowerQuery)
           ) {
-            output += generateTableRow(i, students[i]);
+            searchedStudents.push(students[i]);
           }
         }
-        document.getElementById("tableBody").innerHTML = output;
+        renderStudents(searchedStudents);
+      }
+
+      //--------------------------------------------------------
+
+      let clickCounter = 0;
+      students.forEach((students, i) => (students.di = i));
+
+      const ageSorting = () => {
+        if (clickCounter === 0) {
+          students.sort((a, b) => a.нас - b.нас);
+          clickCounter = 1;
+        } else if (clickCounter === 1) {
+          students.sort((a, b) => b.нас - a.нас);
+          clickCounter = 2;
+        } else {
+          students.sort((a, b) => a.di - b.di);
+          clickCounter = 0;
+        }
+        renderStudents(students);
       };
 
-      const ageSortingA = () => {
-        students.sort((a, b) => a.нас - b.нас);
-        printAll();
-      };
-      const ageSortingD = () => {
-        students.sort((a, b) => b.нас - a.нас);
-        printAll();
-      };
+      //------------------------------------------
+      function renderStudents(students) {
+        document.getElementById("tableBody").innerHTML = students
+          .map((student, i) => generateTableRow(i, student))
+          .join("");
+      }
     </script>
   </body>
 </html>
